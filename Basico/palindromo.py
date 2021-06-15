@@ -11,12 +11,16 @@ def palindromo(palabra):
 
 def run():
     palabra = input("Escribe una palabra: ")
-    es_palindromo = palindromo(palabra)
 
-    if es_palindromo:
-        print('Es palíndromo')
-    else:
-        print('No es palíndromo')
+    try:
+        es_palindromo = palindromo(palabra)
+
+        if es_palindromo:
+            print('Es palíndromo')
+        else:
+            print('No es palíndromo')
+    except TypeError:
+        print('Solo se pueden ingresar strings')
 
 
 if __name__ == '__main__':
